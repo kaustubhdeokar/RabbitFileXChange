@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "amqplib": "^0.10.4",
+    "inquirer": "^11.0.2",
+    "inquirer-select-directory": "^1.2.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
