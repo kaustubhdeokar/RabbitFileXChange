@@ -2,8 +2,11 @@ const amqp = require('amqplib/callback_api');
 const fs = require('fs');
 const path = require('path');
 
+const rabbitmqHost = '192.168.1.10';
+
 function queueFile(filePath) {
-    amqp.connect('amqp://localhost', (error0, connection) => {
+    
+    amqp.connect(`amqp://${rabbitmqHost}`, (error0, connection) => {
         if (error0) throw error0;
 
         connection.createChannel((error1, channel) => {

@@ -2,7 +2,9 @@ const amqp = require('amqplib/callback_api');
 const fs = require('fs');
 const path = require('path');
 
-amqp.connect('amqp://localhost', (error0, connection) => {
+const rabbitmqHost = '192.168.1.10'; 
+
+amqp.connect(`amqp://${rabbitmqHost}`, (error0, connection) => {
     if (error0) throw error0;
 
     connection.createChannel((error1, channel) => {
