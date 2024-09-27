@@ -3,8 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 const rabbitmqHost = '192.168.1.10'; 
+const rabbitmqPort = '5672';     // Port for RabbitMQ (default is 5672)
 
-amqp.connect(`amqp://${rabbitmqHost}`, (error0, connection) => {
+amqp.connect(`amqp://${rabbitmqHost}:${rabbitmqPort}`, (error0, connection) => {
     if (error0) throw error0;
 
     connection.createChannel((error1, channel) => {
