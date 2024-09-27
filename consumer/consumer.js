@@ -2,7 +2,7 @@ const amqp = require('amqplib/callback_api');
 const fs = require('fs');
 const path = require('path');
 
-const rabbitmqHost = '192.168.1.10'; 
+const rabbitmqHost = '100.78.115.75'; 
 const rabbitmqPort = '5672';     // Port for RabbitMQ (default is 5672)
 
 amqp.connect(`amqp://${rabbitmqHost}:${rabbitmqPort}`, (error0, connection) => {
